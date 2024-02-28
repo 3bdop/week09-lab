@@ -18,14 +18,13 @@ class Book:
 class BookManager:
     def __init__(self):
         self.books = []
-        self.book = Book()
 
     def add_book(self, book):
         if book not in self.books:
             self.books.append(book)
 
     def remove_book(self, title):
-        self.books = [book for book in self.books if book.getTitle() != title]
+        self.books = [book for book in self.books if self.bookd.getTitle() != title]
 
     def list_books(self):
         return self.books
