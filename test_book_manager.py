@@ -4,8 +4,8 @@ from book_manager import Book, BookManager
 class TestBookManager(unittest.TestCase):
     def setUp(self):
         self.manager = BookManager()
-        self.book1 = {'isbn':2311, 'title':'East of Eden by John Steinbeck', 'author':'Ali'}
-        self.book2 = {'isbn':2532, 'title':'The House of Mirth by Edith Wharton', 'author':'Omar'}
+        self.book1 = Book(2311, 'East of Eden by John Steinbeck', 'Ali')
+        self.book2 = Book(2532, 'The House of Mirth by Edith Wharton','Omar')
 
     def test_add_and_list(self):
         self.manager.add_book(self.book1)
