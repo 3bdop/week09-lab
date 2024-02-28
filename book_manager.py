@@ -11,17 +11,21 @@ class Book:
 
     def __repr__(self):
         return f"Book({self.isbn}, '{self.title}', '{self.author}')"
+        
+    def getTitle(self):
+        return self.title
 
 class BookManager:
     def __init__(self):
         self.books = []
+        self.book = Book()
 
     def add_book(self, book):
         if book not in self.books:
             self.books.append(book)
 
     def remove_book(self, title):
-        self.books = [book for book in self.books if self.title != title]
+        self.books = [book for book in self.books if book.getTitle() != title]
 
     def list_books(self):
         return self.books
