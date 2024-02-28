@@ -21,7 +21,7 @@ class BookManager:
             self.books.append(book)
 
     def remove_book(self, title):
-        self.books = [book for book in self.books if book.title != title]
+        self.books = [book for book in self.books if self.title != title]
 
     def list_books(self):
         return self.books
