@@ -14,12 +14,12 @@ class TestBookManager(unittest.TestCase):
 
     def test_remove_book(self):
         self.manager.add_book(self.book2)
-        self.manager.remove_book('The House of Mirth by Edith Wharton')
+        self.manager.remove_book(2532)
         self.assertEqual(self.manager.list_books(), [])
         
     def test_remove_none_existent_book(self):
         self.manager.add_book(self.book1)
-        self.manager.remove_book('idk book')
+        self.manager.remove_book(24214)
         self.assertEqual(self.manager.list_books(), [self.book1])
     
 if __name__ == '__main__':
